@@ -1,0 +1,23 @@
+CREATE DATABASE  customers CHARACTER SET utf8 
+COLLATE utf8_general_ci ;
+
+CREATE TABLE clients (
+         c_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+         c_name VARCHAR(100),
+         c_last_name VARCHAR(100),
+         c_status int(2) REFERENCES status(st_id),
+         c_phone int(11),
+         c_created TIMESTAMP DEFAULT NOW()
+       );
+       
+CREATE TABLE status (
+         st_id INT NOT NULL PRIMARY KEY,
+         st_status VARCHAR(100)
+         
+       );
+
+insert into status values (1,"Новый");
+insert into status values (2,"Зарегистрирован");
+insert into status values (3,"Отказался");
+insert into status values (4,"Недоступен");
+commit;
