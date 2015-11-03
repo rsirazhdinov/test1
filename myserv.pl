@@ -5,7 +5,7 @@ package MyWebServer;
 use HTTP::Server::Simple::CGI;
 use CGI;
 use DBI;
-use DBD::mysqlPP	;
+use DBD::mysqlPP;
 
 
 our @ISA = qw(HTTP::Server::Simple::CGI);
